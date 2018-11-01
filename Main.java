@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 //        url: https://stackoverflow.com/questions/5204051/how-to-calculate-the-running-time-of-my-program
         long startTime = System.nanoTime();
-
+        String fileName = "C:\\Users\\Owner\\Documents\\summer282\\Project1\\src\\big.txt";
         StringArray sArray = new StringArray(10);
         StringLinkedList slink = new StringLinkedList();
         StringQueue sq = new StringQueue();
@@ -20,7 +20,7 @@ public class Main {
 
 //        Array traversal
 //        url: https://stackoverflow.com/questions/13185727/reading-a-txt-file-using-scanner-class-in-java
-        File file = new File("C:\\Users\\Owner\\Documents\\summer282\\Project1\\src\\big.txt");
+        File file = new File(fileName);
 
         try {
             Scanner sc = new Scanner(file);
