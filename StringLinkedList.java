@@ -33,12 +33,12 @@ public class StringLinkedList {
         input = value;
         if (this.head == null) {
             this.head = current;
-            howMany++;
+            this.howMany++;
         } else {
             head.next = current;
             current.next = tail;
             head = tail;
-            howMany++;
+            this.howMany++;
         }
         print();
     }
@@ -46,7 +46,7 @@ public class StringLinkedList {
     public void print() {
         StringLinkedList currentList = new StringLinkedList(this.input);
         currentList.setString(this.input);
-        System.out.println("Linked list holds: " + currentList.getString() + " at: " + howMany);
+        System.out.println("Linked list holds: " + currentList.getString() + " at: " + this.howMany);
 
     }
 
