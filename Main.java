@@ -12,7 +12,7 @@ public class Main {
 //        url: https://stackoverflow.com/questions/5204051/how-to-calculate-the-running-time-of-my-program
         long startTime = System.nanoTime();
 
-        StringArray sas = new StringArray(10);
+        StringArray sArray = new StringArray(10);
         StringLinkedList slink = new StringLinkedList();
         StringQueue sq = new StringQueue();
         StringStack stack = new StringStack();
@@ -29,7 +29,7 @@ public class Main {
                 String[] valueArray = value.split(" ");
                 for (int i = 0; i < valueArray.length; i++) {
 //                    has the reverse() method inside here. If you want to take it out you can comment out line 61 on StringArray.java
-                    sas.insert(valueArray[i]);
+                    sArray.insert(valueArray[i]);
                     //uncomment this line if you comment the reverse method in StringArray.java
 //                    sas.print();
 
