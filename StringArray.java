@@ -27,24 +27,23 @@ public class StringArray {
         this.input = value;
     }
 
-    //
     public String getString() {
-        return input;
+        return this.input;
     }
 
     public void print() {
-        StringArray tempSA = new StringArray(input, capacity);
-        tempSA.setString(input);
-        System.out.println(" " + inputAmount + " : " + tempSA.getString());
+        StringArray tempStringArray = new StringArray(input, capacity);
+        tempStringArray.setString(input);
+        System.out.println(" " + inputAmount + " : " + tempStringArray.getString());
     }
 
     public void checkVectorSize() {
-        System.out.println("Vector Size " + capacity);
+        System.out.println("Vector Size " + this.capacity);
     }
 
     public void insert(String value) {
         this.input = value;
-        StringArray tempSA = new StringArray(this.input, capacity);
+        StringArray tempStringArray = new StringArray(this.input, capacity);
         if (inputAmount >= capacity) {
             StringArray[] newArray = new StringArray[2 * capacity];
             for (int i = 0; i < inputAmount; i++) {
@@ -53,12 +52,11 @@ public class StringArray {
             theArray = newArray;
             capacity = capacity * 2;
         }
-        for (int i = this.inputAmount; i <tempSA.inputAmount; i--) {
+        for (int i = this.inputAmount; i <tempStringArray.inputAmount; i--) {
             theArray[i] = theArray[i - 1];
         }
-        theArray[inputAmount] = tempSA;
+        theArray[inputAmount] = tempStringArray;
         reverse(this.input);
-//        print();
         inputAmount++;
     }
 //    https://stackoverflow.com/questions/7569335/reverse-a-string-in-java
